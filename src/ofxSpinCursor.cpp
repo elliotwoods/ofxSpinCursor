@@ -16,7 +16,7 @@ void ofxSpinCursor::draw(const ofVec2f & xy) {
 	ofLine(+10, -10, -10, +10);
 	
 	ofPushMatrix();
-	ofRotate(ofGetElapsedTimef() * 360.0f / OFXSPINCURSOR_PERIOD);
+	ofRotate(-ofGetElapsedTimef() * 360.0f / OFXSPINCURSOR_PERIOD);
 	for(int i=0; i < OFXSPINCURSOR_PETAL_COUNT; i++) {
 		ofLine(20.0f, 0, maxDistance, 0);
 		ofRotate(360.0f / (float) OFXSPINCURSOR_PETAL_COUNT);
