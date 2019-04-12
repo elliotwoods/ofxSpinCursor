@@ -21,18 +21,18 @@ void ofxSpinCursor::draw(const ofVec2f & xy) {
 			//draw cross
 			ofNoFill();
 			ofSetColor(255);
-			ofRect(-10, -10, 20, 20);
-			ofLine(-10, -10, -3, -3);
-			ofLine(+10, +10, +3, +3);
-			ofLine(+10, -10, +3, -3);
-			ofLine(-10, +10, -3, +3);
+			ofDrawRectangle(-10, -10, 20, 20);
+			ofDrawLine(-10, -10, -3, -3);
+			ofDrawLine(+10, +10, +3, +3);
+			ofDrawLine(+10, -10, +3, -3);
+			ofDrawLine(-10, +10, -3, +3);
 
 			//draw spin
 			ofPushMatrix();
-			ofRotate(-ofGetElapsedTimef() * 360.0f / OFXSPINCURSOR_PERIOD);
+			ofRotateDeg(-ofGetElapsedTimef() * 360.0f / OFXSPINCURSOR_PERIOD);
 			for (int i = 0; i < OFXSPINCURSOR_PETAL_COUNT; i++) {
-				ofLine(20.0f, 0, maxDistance, 0);
-				ofRotate(360.0f / (float)OFXSPINCURSOR_PETAL_COUNT);
+				ofDrawLine(20.0f, 0, maxDistance, 0);
+				ofRotateDeg(360.0f / (float)OFXSPINCURSOR_PETAL_COUNT);
 			}
 			ofPopMatrix();
 
