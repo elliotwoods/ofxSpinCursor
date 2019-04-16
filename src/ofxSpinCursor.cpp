@@ -1,7 +1,7 @@
 #include "ofxSpinCursor.h"
 
 //----------
-void ofxSpinCursor::draw(const ofVec2f & xy) {
+void ofxSpinCursor::draw(const glm::vec2 & xy) {
 	float maxDistance = ofVec2f(ofGetScreenWidth(), ofGetScreenHeight()).length();
 	
 	ofPushStyle();

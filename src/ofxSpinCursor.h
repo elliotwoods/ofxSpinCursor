@@ -7,6 +7,6 @@
 
 class ofxSpinCursor {
 public:
-	static void draw(const ofVec2f &);
+	static void draw(const glm::vec2 &);
 	static void draw(float x, float y);
 };
