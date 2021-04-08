@@ -2,7 +2,7 @@
 
 //----------
 void ofxSpinCursor::draw(const glm::vec2 & xy) {
-	float maxDistance = ofVec2f(ofGetScreenWidth(), ofGetScreenHeight()).length();
+	float maxDistance = glm::length(glm::vec2(ofGetScreenWidth(), ofGetScreenHeight()));
 	
 	ofPushStyle();
 	{
